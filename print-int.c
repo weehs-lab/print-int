@@ -39,7 +39,7 @@ int	tokenize(stack *data, int num)
 	}
 	while (quotient >= 0)
 	{
-		if (num == 0)
+		if (quotient == 0)
 		{
 			if (push (data, remainder) == -1)
 				return (-1);

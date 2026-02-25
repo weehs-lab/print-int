@@ -1,9 +1,9 @@
 NAME	= print-int
 CC		= cc
-CFLAGS	= -Wall -Wextra -Werror -g
+CFLAGS	= -Wall -Wextra -Werror -O3
 RM		= rm -f
 
-SRC		= stack.c utility.c print-int.c main.c
+SRC		= stack.c utility.c print-int.c
 OBJS	= $(SRC:.c=.o)
 HEADER	= stack.h utility.h print-int.h
 
