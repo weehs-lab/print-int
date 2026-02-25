@@ -37,19 +37,20 @@ int	tokenize(stack *data, int num)
 		quotient = -quotient;
 		remainder = -remainder;
 	}
-	while (quotient >= 10)
+	while (quotient >= 0)
 	{
-		if (push (data, remainder) == -1)
+		if (num == 0)
 		{
-			return (-1);
+			if (push (data, remainder) == -1)
+				return (-1);
+			return (0);
 		}
+		if (push (data, remainder) == -1)
+			return (-1);
 		remainder = quotient % 10;
 		quotient = quotient / 10;
 	}
-	if (push (data, remainder) == -1)
-		return (-1);
-	else
-		return (0);
+	return (0);
 }
 
 int	display(stack *data, int num)

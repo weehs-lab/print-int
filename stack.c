@@ -37,18 +37,15 @@ int	push(stack *data, int value)
 {
 	int	i;
 
-	i = 1;
+	i = 11;
 	if (!data)
 		return (-1);
-	while (i < 12)
+	if (data->size == 12)
+		return (-1);
+	while (i >= 1)
 	{
-		if (data->size == 12)
-			return (-1);
-		else
-		{
-			data->mem[i] = data->mem[i - 1];
-		}
-		i += 1;
+		data->mem[i] = data->mem[i - 1];
+		i -= 1;
 	}
 	data->mem[0] = value;
 	data->size = data->size + 1;
