@@ -62,7 +62,7 @@ int	display(stack *data, int num)
 		return (-1);
 	if (tokenize (data, num) == -1)
 		return (-1);
-	while (i != -1)
+	while (data->size != 1)
 	{
 		i = pop (data);
 		if (int_to_char (i, &text) == -1)

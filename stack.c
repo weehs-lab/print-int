@@ -17,12 +17,6 @@
 
 #include "stack.h"
 
-struct	stack
-{
-	int	mem[12];
-	int	size;
-};
-
 int	initialization(stack *data)
 {
 	int		i;
@@ -33,6 +27,7 @@ int	initialization(stack *data)
 	while (i < 12)
 	{
 		data->mem[i] = 0;
+		i += 1;
 	}
 	data->size = 1;
 	return (0);
@@ -42,22 +37,21 @@ int	push(stack *data, int value)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	if (!data)
 		return (-1);
 	while (i < 12)
 	{
 		if (data->size == 12)
-		{
 			return (-1);
-		}
 		else
 		{
-			data->mem[i + 1] = data->mem[i];
+			data->mem[i] = data->mem[i - 1];
 		}
+		i += 1;
 	}
 	data->mem[0] = value;
-	data->size += 1;
+	data->size = data->size + 1;
 	return (0);
 }
 
@@ -73,8 +67,9 @@ int	pop(stack *data)
 	while (i < 12)
 	{
 		data->mem[i - 1] = data->mem[i];
+		i += 1;
 	}
 	data->mem[11] = 0;
-	data->size -= 1;
+	data->size = data->size - 1;
 	return (val);
 }

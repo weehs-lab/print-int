@@ -17,7 +17,11 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-typedef struct stack	stack;
+typedef struct stack
+{
+	int	mem[12];
+	int	size;
+}	stack;
 
 int	initialization(stack *data);
 int	push(stack *data, int value);
