@@ -54,5 +54,4 @@ dkms.conf
 # debug information files
 *.dwo
 
-main.c
 print_int
