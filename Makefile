@@ -3,9 +3,9 @@ CC		= cc
 CFLAGS	= -Wall -Wextra -Werror -O3
 RM		= rm -f
 
-SRC		= 
+SRC		= stack.c
 OBJS	= $(SRC:.c=.o)
-HEADER	= 
+HEADER	= stack.h
 
 all:$(NAME)
 
