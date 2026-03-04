@@ -1,4 +1,4 @@
-/* [PROJECT]
+/* print-int
  * Copyright (C) 2026 weehs
  * 
  * This program is free software; you can redistribute it and/or modify
